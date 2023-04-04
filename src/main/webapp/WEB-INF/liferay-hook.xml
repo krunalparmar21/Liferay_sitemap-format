@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hook PUBLIC "-//Liferay//DTD Hook 7.0.0//EN" "http://www.liferay.com/dtd/liferay-hook_7_0_0.dtd">
+
+<hook>
+	<portal-properties>portal.properties</portal-properties>
+
+	<servlet-filter>
+		<servlet-filter-name>SitemapFilterClass</servlet-filter-name>
+		<servlet-filter-impl>com.cemex.format.SitemapFilterClass</servlet-filter-impl>
+	</servlet-filter>
+	<servlet-filter-mapping>
+		<servlet-filter-name>SitemapFilterClass</servlet-filter-name>
+		<url-pattern>*.xml</url-pattern>
+		<url-pattern>/sitemap.xml</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</servlet-filter-mapping>
+</hook>
